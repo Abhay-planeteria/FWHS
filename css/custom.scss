@@ -1145,10 +1145,6 @@ label.title {
                 height: fit-content;
             }
         }
-        .allBtn a{
-            color: $white;
-            background: $primary;
-        }
     }
 }
 /*================================= 5 Year Plan Section End =======================================*/
@@ -1164,6 +1160,17 @@ label.title {
     padding: 56px 40px;
     margin-bottom: 56px;
     background: $primary;
+    .allBtn {
+        a {
+            color: $black;
+            min-width: 180px;
+            background: $secondary;
+            &:hover{
+                background: $second-over;
+            }
+        }
+    }
+
 }
 
 .top-Title {
@@ -3589,14 +3596,6 @@ h2+.expand_img_grid {
 
 .newsBody {
     padding: 16px 0;
-}
-
-.allBtn {
-    a {
-        color: $black;
-        min-width: 180px;
-        background: $secondary;
-    }
 }
 
 .newsSearchEra {

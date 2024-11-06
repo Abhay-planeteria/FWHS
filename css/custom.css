@@ -1096,10 +1096,6 @@ label.title {
   height: -moz-fit-content;
   height: fit-content;
 }
-.planSection .leftSide-overlay .allBtn a {
-  color: #FFFFFF;
-  background: #6B1E74;
-}
 
 /*================================= 5 Year Plan Section End =======================================*/
 .section-padding {
@@ -1112,6 +1108,14 @@ label.title {
   padding: 56px 40px;
   margin-bottom: 56px;
   background: #6B1E74;
+}
+.NewsMettings .allBtn a {
+  color: #000000;
+  min-width: 180px;
+  background: #F38B00;
+}
+.NewsMettings .allBtn a:hover {
+  background: #FFB047;
 }
 
 .top-Title {
@@ -3403,12 +3407,6 @@ h2 + .expand_img_grid {
 
 .newsBody {
   padding: 16px 0;
-}
-
-.allBtn a {
-  color: #000000;
-  min-width: 180px;
-  background: #F38B00;
 }
 
 .newsSearchEra {
