@@ -347,10 +347,12 @@ select {
 }
 
 label.title {
-    font-weight: 700;
-    @include book_antiqua;
-    font-size: 16px;
     color: $black;
+    @include bold;
+    @include gotham;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
 }
 
  ::-webkit-input-placeholder {
@@ -1594,7 +1596,7 @@ label.title {
     padding-top: 110px;
     //a {}
     p {
-        margin-bottom: 20px;
+        margin-bottom: 24px;
     }
     //li {}
     .wp-block-heading+.wp-block-advgb-table {
@@ -2901,29 +2903,34 @@ h2+.expand_img_grid {
 }
 
 .result_row {
-    margin-bottom: 20px;
-    border-radius: 0px;
+    margin-bottom: 24px;
+    border-radius: 0 10px 10px 10px; 
     position: relative;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+    background: $cultured;
+    //box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
     h3,
     h4,
     h5,
     h2 {
         font-size: 22px;
         font-weight: 700;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
     .re_category {
-        font-weight: 700;
-        background: #BDDCC8;
-        font-size: 16px;
-        font-family: "book_antiqua", sans-serif;
-        color: #4D4D50;
-        padding: 5px 12px;
+        color: $black;
+        padding: 8px 16px;
+        @include gotham;
+        @include bold;
+        font-size: 18px;
+        line-height: normal;
         display: inline-block;
+        background: $booger-buster;
     }
     .rsltBody {
-        padding: 15px;
+        padding: 16px;
+        p:last-child{
+            margin-bottom: 0;
+        }
     }
     >a {
         display: block;
@@ -2933,6 +2940,7 @@ h2+.expand_img_grid {
     }
     &:hover {
         h3 {
+            color: $primary;
             text-decoration: underline;
         }
     }
@@ -2951,6 +2959,14 @@ h2+.expand_img_grid {
         padding-bottom: 10px;
         select {
             min-width: 220px;
+            border-color: $black-olive;
+            @include book_antiqua;
+            @include regular;
+            font-size: 15px;
+            line-height: normal;
+            &:focus{
+                box-shadow: none;
+            }
         }
         @include md {
             grid-template-columns: auto;
