@@ -1109,24 +1109,27 @@ label.title {
 
 /*================================= 5 Year Plan Section Start =======================================*/
 .planSection{
-    padding: 56px 0 0;
+    padding: 56px 15px 0;
     .container{
+        padding: 0;
         position: relative;
-        display: flex;
-    }
-    .leftSideBox img,
-    .rightSideBox img{
-        height: 450px;
-        object-fit: cover;
+        background-image: url(../img/plan_bg01.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
     .leftSide-overlay{
-        top: 0;
         width: 50%;
-        height: 100%;
-        padding: 32px 56px 40px;
-        position: absolute;
         background: $cultured;
+        padding: 32px 56px 40px;
         border-radius: 0 0 150px 0;
+        @media (max-width: 991.98px) {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        @media (max-width: 700px) {
+            width: 100%;
+        }
         p{
             font-weight: 700;
             margin-bottom: 16px;
@@ -1135,11 +1138,30 @@ label.title {
             }
         }
         .lf-heading{
-            display: flex;
             gap: 16px;
+            display: flex;
+            align-items: center;
             margin-bottom: 16px;
             h2{
                 margin-bottom: 0;
+                @media (max-width: 991.98px) {
+                    font-size: 28px;
+                }
+            }
+            .planIcon{
+                width: 65px;
+                height: 65px;
+                min-width: 65px;
+                background: $white;
+                border-radius: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    margin-left: -5px;
+                    margin-top: -6px;
+                    max-width: fit-content;
+                }
             }
             img{
                 height: fit-content;
@@ -1439,15 +1461,18 @@ label.title {
         }
         a {
             width: 32px;
-            @include all;
             height: 32px;
-            border-radius: 5px;
+            @include all;
+            border-radius: 50px;
+            background: $primary;
+            align-self: center;
             transition: all 0.3s ease-in-out;
             &:hover {
-                img {
+                background: $secondary;
+                /*img {
                     //filter: brightness(0) saturate(100%) invert(61%) sepia(41%) saturate(5315%) hue-rotate(8deg) brightness(103%) contrast(102%);
-                    filter: brightness(0) saturate(100%) invert(52%) sepia(99%) saturate(575%) hue-rotate(358deg) brightness(92%) contrast(108%);
-                }
+                    //filter: brightness(0) saturate(100%) invert(52%) sepia(99%) saturate(575%) hue-rotate(358deg) brightness(92%) contrast(108%);
+                }*/
             }
         }
     }

@@ -1056,26 +1056,32 @@ label.title {
 
 /*================================= 5 Year Plan Section Start =======================================*/
 .planSection {
-  padding: 56px 0 0;
+  padding: 56px 15px 0;
 }
 .planSection .container {
+  padding: 0;
   position: relative;
-  display: flex;
-}
-.planSection .leftSideBox img,
-.planSection .rightSideBox img {
-  height: 450px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-image: url(../img/plan_bg01.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .planSection .leftSide-overlay {
-  top: 0;
   width: 50%;
-  height: 100%;
-  padding: 32px 56px 40px;
-  position: absolute;
   background: #F4F4F4;
+  padding: 32px 56px 40px;
   border-radius: 0 0 150px 0;
+}
+@media (max-width: 991.98px) {
+  .planSection .leftSide-overlay {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (max-width: 700px) {
+  .planSection .leftSide-overlay {
+    width: 100%;
+  }
 }
 .planSection .leftSide-overlay p {
   font-weight: 700;
@@ -1085,12 +1091,34 @@ label.title {
   font-weight: 400;
 }
 .planSection .leftSide-overlay .lf-heading {
-  display: flex;
   gap: 16px;
+  display: flex;
+  align-items: center;
   margin-bottom: 16px;
 }
 .planSection .leftSide-overlay .lf-heading h2 {
   margin-bottom: 0;
+}
+@media (max-width: 991.98px) {
+  .planSection .leftSide-overlay .lf-heading h2 {
+    font-size: 28px;
+  }
+}
+.planSection .leftSide-overlay .lf-heading .planIcon {
+  width: 65px;
+  height: 65px;
+  min-width: 65px;
+  background: #FFFFFF;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.planSection .leftSide-overlay .lf-heading .planIcon img {
+  margin-left: -5px;
+  margin-top: -6px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 .planSection .leftSide-overlay .lf-heading img {
   height: -moz-fit-content;
@@ -1375,15 +1403,21 @@ label.title {
 }
 .footer-content ul.foot_media a {
   width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 32px;
-  border-radius: 5px;
+  border-radius: 50px;
+  background: #6B1E74;
+  align-self: center;
   transition: all 0.3s ease-in-out;
 }
-.footer-content ul.foot_media a:hover img {
-  filter: brightness(0) saturate(100%) invert(52%) sepia(99%) saturate(575%) hue-rotate(358deg) brightness(92%) contrast(108%);
+.footer-content ul.foot_media a:hover {
+  background: #F38B00;
+  /*img {
+      //filter: brightness(0) saturate(100%) invert(61%) sepia(41%) saturate(5315%) hue-rotate(8deg) brightness(103%) contrast(102%);
+      //filter: brightness(0) saturate(100%) invert(52%) sepia(99%) saturate(575%) hue-rotate(358deg) brightness(92%) contrast(108%);
+  }*/
 }
 .footer-content .contact_menu p {
   font-weight: 700;
