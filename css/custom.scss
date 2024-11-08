@@ -273,8 +273,13 @@ video {
 .form-control {
     min-height: 50px;
     background-color: $white;
-    //border: 1px solid $black-olive;
+    border: 1px solid $black-olive;
     border-radius: 5px !important;
+    &:focus{
+        outline: none;
+        box-shadow: none;
+        border-color: $black-olive;
+    }
 }
 
 .no-margin {
@@ -3180,44 +3185,70 @@ h2+.expand_img_grid {
     }
 }
 
-//Event Detil page
+/*================================= Event Details page Start =======================================*/
 .event-detail {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    h1 {
-        font-size: 34px;
-        margin-bottom: 25px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h2,
+    p {
+        margin-bottom: 16px;
     }
     .category {
-        font-weight: 700;
-        //color: $black-olive;
-        margin-bottom: 15px;
+        @include bold;
+        @include gotham;
+        font-size: 18px;
+        display: block;
+        color: $black-olive;
+        margin-bottom: 16px;
     }
     .canel-info {
+        @include regular;
+        @include book_antiqua;
         color: #B61717;
-        text-transform: uppercase;
-        font-family: "book_antiqua", sans-serif;
-        font-weight: 400;
         position: relative;
-        margin-bottom: 15px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
     }
     .location {
-        strong {
-            padding-bottom: 5px;
+        margin-bottom: 16px;
+        p{
+            margin-bottom: 8px;
+        }
+        a{
+            color: $black;
+            @include regular;
+            text-decoration: none;
         }
     }
     .document_era {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        margin-bottom: 24px;
         a {
-            margin-bottom: 15px;
+            color: $black;
+            @include bold;
+            @include gotham;
+            font-size: 16px;
+            padding: 8px 0;
+            margin-bottom: 8px;
+            text-decoration: none;
+            &:last-child{
+                margin-bottom: 0px;
+            }
+            &:hover{
+                color: $primary;
+                img{
+                    filter: none;
+                }
+            }
         }
     }
     .org_info {
-        padding-top: 10px;
-        padding-bottom: 20px;
+        padding-top: 0px;
         .h3 {
-            margin-bottom: 15px;
+            margin-bottom: 16px;
+        }
+        a{
+            margin-top: 8px;
+            display: inline-block;
         }
     }
     .evt_img_info {
@@ -3233,17 +3264,75 @@ h2+.expand_img_grid {
 }
 
 .related_events {
-    padding-top: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h2{
+        color: $black;
+    }
     .evt_row {
         margin-left: -5px;
         margin-right: -5px;
     }
     .evt_col {
-        padding-left: 5px;
-        padding-right: 5px;
-        margin-bottom: 10px;
+        padding: 0px 12px;
+        margin-bottom: 24px;
+        a {
+            text-decoration: none;
+        }
+    }
+    .evt-content {
+        background: $cultured;
+        border-radius: 0px 0px 50px 0px;
+        //box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.20);
+        .evt_date {
+            display: inline-block;
+            background: $booger-buster;
+            padding: 12px 24px 10px 24px;
+            span {
+                color: $black;
+                @include gotham;
+                margin-bottom: 0;
+            }
+        }
+        h3 {
+            margin-bottom: 16px;
+        }
+        &:hover {
+            h3 {
+                color: $primary;
+                text-decoration: underline;
+            }
+        }
+        .canel-info {
+            color: #B61717;
+            font-weight: 400;
+            padding-left: 15px;
+            position: relative;
+            text-transform: uppercase;
+            font-family: $book_antiqua;
+            &:before {
+                top: 4px;
+                left: 6px;
+                width: 1px;
+                content: "";
+                height: 14px;
+                position: absolute;
+                background: $black;
+            }
+        }
+    }
+    .evt-info {
+        padding: 16px 24px;
+        p {
+            margin-bottom: 16px;
+            //color: $black-olive;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
     }
 }
+/*================================= Event Details page End =======================================*/
 
 //Department Directory
 .directory_wrap {
@@ -4001,16 +4090,21 @@ h2+.expand_img_grid {
 }
 /*================================= News Details Page End =======================================*/
 
-//Procurment
-//Procurment
+/*================================= Business Opportunities RFP's Page Start =======================================*/
 .proc_wrap {
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     .container {
         max-width: 900px;
         margin: 0 auto;
     }
     .top-text {
         text-align: center;
+        padding-bottom: 32px;
+        p{
+            @include bold;
+            margin-bottom: 0;
+            padding-bottom: 24px;
+        }
     }
     .proc_filter {
         padding-top: 10px;
@@ -4044,76 +4138,116 @@ h2+.expand_img_grid {
 }
 
 .acccard {
+    overflow: hidden;
+    margin-bottom: 8px;
+    border-radius: 10px;
     box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
-    margin-bottom: 15px;
     .acctitle {
-        padding: 20px;
+        padding: 16px;
         display: flex;
-        justify-content: space-between;
         cursor: pointer;
         position: relative;
         align-items: center;
+        justify-content: space-between;
         h2 {
             font-size: 16px;
         }
         h3 {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             text-transform: capitalize;
         }
         h4 {
             font-size: 16px;
-            font-weight: 700;
-            font-family: $book_antiqua;
-            //color: $black-olive;
+            color: $black-olive;
             margin-bottom: 0px;
         }
         .acco_sign {
-            margin-left: 15px;
+            margin-left: 16px;
+            margin-right: 16px;
+            position: relative !important;
             img {
                 width: 18px;
+                min-width: 18px;
             }
         }
         &.active {
             .acco_sign {
                 img {
                     @include rotate;
+                    filter: brightness(0) saturate(100%) invert(53%) sepia(73%) saturate(2246%) hue-rotate(7deg) brightness(102%) contrast(103%);
                 }
             }
         }
         &:hover {
+            background: $primary;
             h2,
-            h3 {
-                color: $secondary;
-                text-decoration: underline;
+            h3,
+            p,
+            h4 {
+                color: $white;
+            }
+            .acco_sign img {
+                filter: brightness(0) saturate(100%) invert(100%) sepia(6%) saturate(0%) hue-rotate(271deg) brightness(114%) contrast(100%);
             }
         }
+    }
+    .acc_left{
+        padding-left: 16px;
+        padding-right: 16px;
     }
     .acc_right {
         display: flex;
         p {
             margin: 0px;
+            @include bold;
+            @include gotham;
+            font-size: 16px;
+            margin-left: 16px;
+            margin-right: 16px;
+            color: $black-olive;
         }
     }
     .document_era {
-        margin-bottom: 20px;
+        margin-bottom: 0;
+        .doc_block:last-child{
+            margin-bottom: 0;
+        }
+        a{
+            color: $black;
+            text-decoration: none;
+            &:hover{
+                color: $prime-over;
+                text-decoration: underline;
+                img{
+                    filter: none;
+                }
+            }
+        }
+        span{
+            @include bold;
+            @include gotham;
+            font-size: 16px;
+            line-height: normal;
+        }
     }
 }
 
 .accpanel {
-    padding: 20px;
-    padding-top: 10px;
     display: none;
+    padding: 8px 32px 24px;
     p {
-        margin-bottom: 15px;
+        margin-bottom: 16px;
     }
     h4 {
-        //color: $black-olive;
-        font-size: 20px;
-        font-weight: 600;
-        padding-bottom: 10px;
-        padding-top: 10px;
+        color: $black;
+        @include bold;
+        font-size: 18px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-bottom: 16px;
     }
 }
+/*================================= Business Opportunities RFP's Page End =======================================*/
 
 //General fix with page builder
 .aligncenter {

@@ -733,17 +733,17 @@
     padding-left: 15px;
     padding-right: 15px;
   }
-  .acccard .acctitle {
-    flex-wrap: wrap;
+  /*.acccard .acctitle {
+      flex-wrap: wrap;
   }
   .acccard .acc_right {
-    width: 100%;
+      width: 100%;
   }
   .acco_sign {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-  }
+      position: absolute;
+      right: 10px;
+      top: 10px;
+  }*/
   .news-dt-content {
     padding-top: 20px;
   }
