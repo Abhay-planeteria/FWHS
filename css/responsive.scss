@@ -195,7 +195,7 @@
             max-width: 100%;
         }
     }
-    .directory_wrap {
+    .meetings_wrap {
         .dd_search_filter,
         .filter-container {
             display: block;
@@ -652,7 +652,7 @@
 }
 
 @media (min-width:768px) and (max-width:992px) {
-    .directory_wrap {
+    .meetings_wrap {
         .dd_search_filter {
             display: block;
         }

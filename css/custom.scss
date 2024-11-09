@@ -3228,7 +3228,7 @@ h2+.expand_img_grid {
             @include gotham;
             font-size: 16px;
             padding: 8px 0;
-            margin-bottom: 8px;
+            margin-bottom: 0;
             text-decoration: none;
             &:last-child{
                 margin-bottom: 0px;
@@ -3334,34 +3334,10 @@ h2+.expand_img_grid {
 }
 /*================================= Event Details page End =======================================*/
 
-//Department Directory
-.directory_wrap {
-    padding-top: 10px;
-    padding-bottom: 50px;
-    @include desk {
-        .left_col {
-            -ms-flex: 0 0 30%;
-            flex: 0 0 30%;
-            max-width: 30%;
-        }
-        .right_col {
-            -ms-flex: 0 0 70%;
-            flex: 0 0 70%;
-            max-width: 70%;
-            padding-left: 5px;
-        }
-    }
-    @media (min-width:768px) and (max-width:992px) {
-        .right_col {
-            padding-left: 0px;
-        }
-    }
-}
-
 .search-Filter-Block {
     //background: $lightblack-olive;
-    padding: 22px;
-    margin-bottom: 20px;
+    padding: 24px;
+    margin-bottom: 16px;
     .search-box {
         margin-bottom: 20px;
     }
@@ -3370,76 +3346,170 @@ h2+.expand_img_grid {
     }
 }
 
+/*================================= Meetings And Agendas page Start =======================================*/
+.meetings_wrap {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .trib_filter-searchBox{
+        margin-bottom: 24px;
+    }
+    .dd_row{
+        margin: 0;
+    }
+    .left_col{
+        padding: 24px 16px 24px 0;
+        @media (max-width:768px) {
+            padding-bottom: 0;
+        }
+        .search-Filter-Block {
+            padding: 0;
+            margin-bottom: 0;
+            .search-box {
+                margin-bottom: 20px;
+            }
+            .reset {
+                padding-top: 8px;
+                display: inline-block;
+                a{
+                    color: $black;
+                    @include bold;
+                    @include gotham;
+                    font-size: 16px;
+                    line-height: normal;
+                    text-decoration: none;
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    &:hover{
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    .right_col{
+        padding: 24px 0;
+    }
+    @media (min-width:768px) {
+        .left_col {
+            min-width: 160px;
+            max-width: 160px;
+            flex: auto;
+        }
+        .right_col {
+            flex: auto;
+            max-width: calc(100% - 160px);
+        }
+    }
+}
+
 .acc__card_sd {
-    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
     background: $white;
     margin-bottom: 16px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
 }
 
 .acc__title_sd {
-    padding: 18px 20px;
-    padding-right: 40px;
-    position: relative;
+    border: 0;
+    display: flex;
     cursor: pointer;
-    h2 {
-        font-size: 22px;
-        margin-bottom: 0px;
+    position: relative;
+    align-items: center;
+    .date_meet{
+        gap: 4px;
+        @include all;
+        width: 110px;
+        min-height: 95px;
+        text-align: center;
+        flex-direction: column;
+        background: $booger-buster;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+        p{
+            color: $black;
+            @include bold;
+            @include gotham;
+            font-size: 16px;
+            margin-bottom: 0;
+            text-transform: uppercase;
+        }
+    }
+    .acco_title_info {
+        flex-grow: 1;
+        padding: 8px 16px;
+        padding-right: 50px;
+        h3{
+            margin-bottom: 8px;
+        }
+        p {
+            color: $black;
+            @include bold;
+            @include gotham;
+            font-size: 16px;
+            margin: 0px;
+        }
     }
     .acco_sign_sd {
+        top: 50%;
+        right: 0;
+        padding: 16px;
         position: absolute;
-        right: 20px;
-        top: 20px;
+        transform: translateY(-50%);
+        img{
+            width: 21px;
+        }
     }
     &.active {
         .acco_sign_sd img {
             transform: rotate(180deg);
-            filter: brightness(0) saturate(100%) invert(46%) sepia(26%) saturate(472%) hue-rotate(337deg) brightness(95%) contrast(89%);
+            filter: brightness(0) saturate(100%) invert(53%) sepia(73%) saturate(2246%) hue-rotate(7deg) brightness(102%) contrast(103%);
         }
     }
     &:hover {
-        background: #CBCDBE;
+        h3{
+            color: $primary;
+            text-decoration: underline;
+        }
     }
 }
 
 .acc__panel_sd {
     display: none;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 40px;
-    padding-top: 8px;
-    .btn_sm {
-        padding: 8px 16px;
+    padding: 16px 32px;
+    h4,
+    p {
+        margin-bottom: 16px;
     }
-    .dd-cont-row {
-        display: grid;
-        grid-template-columns: 3fr 1.5fr;
-        grid-column-gap: 10px;
-        @include md {
-            grid-template-columns: auto;
+    .location {
+        margin-bottom: 16px;
+        p{
+            margin-bottom: 8px;
         }
-        .dd_right {
-            p {
-                margin-bottom: 12px;
+    }
+    .document_era {
+        margin-bottom: 24px;
+        a {
+            color: $black;
+            @include bold;
+            @include gotham;
+            font-size: 16px;
+            padding: 8px 0;
+            margin-bottom: 8px;
+            text-decoration: none;
+            &:last-child{
+                margin-bottom: 0px;
             }
-            h3 {
-                font-size: 16px;
-                color: $black;
-                font-family: $book_antiqua;
-                font-weight: 700;
-                margin-bottom: 5px;
-            }
-        }
-        .dd_right {
-            border-left: 1px solid #BFC2A8;
-            padding-left: 20px;
-            @include md {
-                border-left: 0px;
-                padding-left: 0px;
-                padding-top: 20px;
+            &:hover{
+                color: $primary;
+                img{
+                    filter: none;
+                }
             }
         }
     }
 }
+/*================================= Meetings And Agendas page End =======================================*/
 
 .detail_wrap {
     .tribe-events-view {
@@ -4089,7 +4159,6 @@ h2+.expand_img_grid {
     }
 }
 /*================================= News Details Page End =======================================*/
-
 /*================================= Business Opportunities RFP's Page Start =======================================*/
 .proc_wrap {
     padding-bottom: 40px;
@@ -4248,6 +4317,141 @@ h2+.expand_img_grid {
     }
 }
 /*================================= Business Opportunities RFP's Page End =======================================*/
+
+/*================================= Housing Opportunities page Start =======================================*/
+.house_oppo {
+    padding-bottom: 40px;
+    .top-text {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 40px;
+        p{
+            @include bold;
+            margin-bottom: 0;
+            padding-bottom: 24px;
+        }
+    }
+    .img_text_card{
+        padding-bottom: 40px;
+        .topTitle {
+            margin-bottom: 24px;
+            h2{
+                margin-bottom: 0;
+            }
+        }
+        p{
+            color: $black;
+            font-size: 18px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 5;
+            align-self: stretch;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .img_text_card_row{
+            max-width: 100%;
+            .img_text_card_col{
+                padding: 0 8px;
+                margin-bottom: 24px;
+                @media (max-width: 991.98px) {
+                    flex: 0 0 33.333%;
+                    max-width: 33.333%;
+                }
+                @media (max-width: 767.98px) {
+                    flex: 0 0 50% !important;
+                    max-width: 50% !important;
+                }
+                @media (max-width: 600px) {
+                    flex: 0 0 100% !important;
+                    max-width: 100% !important;
+                }
+            }
+            .text-img-wrap{
+                box-shadow: none;
+                .text_card_block{
+                    padding: 16px;
+                    background: $cultured;
+                    border-radius: 0 0 10px 10px;
+                }
+                p{
+                    margin-bottom: 16px;
+                }
+                a{
+                    &:hover{
+                        h3{
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ourProperties{
+        padding: 56px 15px 0;
+        .container{
+            padding: 0;
+            position: relative;
+            background-image: url(../img/plan_bg01.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .leftSide-overlay{
+            width: 50%;
+            background: $cultured;
+            padding: 32px 56px 40px;
+            border-radius: 0 0 150px 0;
+            @media (max-width: 991.98px) {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+            @media (max-width: 700px) {
+                width: 100%;
+            }
+            p{
+                font-weight: 700;
+                margin-bottom: 16px;
+                &.subPara{
+                    font-weight: 400;
+                }
+            }
+            .lf-heading{
+                gap: 16px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 16px;
+                h2{
+                    margin-bottom: 0;
+                    @media (max-width: 991.98px) {
+                        font-size: 28px;
+                    }
+                }
+                .planIcon{
+                    width: 65px;
+                    height: 65px;
+                    min-width: 65px;
+                    background: $white;
+                    border-radius: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        margin-left: -5px;
+                        margin-top: -6px;
+                        max-width: fit-content;
+                    }
+                }
+                img{
+                    height: fit-content;
+                }
+            }
+        }
+    }
+}
+
+/*================================= Housing Opportunities page End =======================================*/
 
 //General fix with page builder
 .aligncenter {

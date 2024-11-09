@@ -3089,7 +3089,7 @@ h2 + .expand_img_grid {
   font-family: "Gotham", sans-serif;
   font-size: 16px;
   padding: 8px 0;
-  margin-bottom: 8px;
+  margin-bottom: 0;
   text-decoration: none;
 }
 .event-detail .document_era a:last-child {
@@ -3188,30 +3188,9 @@ h2 + .expand_img_grid {
 }
 
 /*================================= Event Details page End =======================================*/
-.directory_wrap {
-  padding-top: 10px;
-  padding-bottom: 50px;
-}
-@media (min-width: 992px) {
-  .directory_wrap .left_col {
-    flex: 0 0 30%;
-    max-width: 30%;
-  }
-  .directory_wrap .right_col {
-    flex: 0 0 70%;
-    max-width: 70%;
-    padding-left: 5px;
-  }
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  .directory_wrap .right_col {
-    padding-left: 0px;
-  }
-}
-
 .search-Filter-Block {
-  padding: 22px;
-  margin-bottom: 20px;
+  padding: 24px;
+  margin-bottom: 16px;
 }
 .search-Filter-Block .search-box {
   margin-bottom: 20px;
@@ -3220,77 +3199,171 @@ h2 + .expand_img_grid {
   padding-top: 15px;
 }
 
+/*================================= Meetings And Agendas page Start =======================================*/
+.meetings_wrap {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.meetings_wrap .trib_filter-searchBox {
+  margin-bottom: 24px;
+}
+.meetings_wrap .dd_row {
+  margin: 0;
+}
+.meetings_wrap .left_col {
+  padding: 24px 16px 24px 0;
+}
+@media (max-width: 768px) {
+  .meetings_wrap .left_col {
+    padding-bottom: 0;
+  }
+}
+.meetings_wrap .left_col .search-Filter-Block {
+  padding: 0;
+  margin-bottom: 0;
+}
+.meetings_wrap .left_col .search-Filter-Block .search-box {
+  margin-bottom: 20px;
+}
+.meetings_wrap .left_col .search-Filter-Block .reset {
+  padding-top: 8px;
+  display: inline-block;
+}
+.meetings_wrap .left_col .search-Filter-Block .reset a {
+  color: #000000;
+  font-weight: 700;
+  font-family: "Gotham", sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  text-decoration: none;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.meetings_wrap .left_col .search-Filter-Block .reset a:hover {
+  color: #6B1E74;
+}
+.meetings_wrap .right_col {
+  padding: 24px 0;
+}
+@media (min-width: 768px) {
+  .meetings_wrap .left_col {
+    min-width: 160px;
+    max-width: 160px;
+    flex: auto;
+  }
+  .meetings_wrap .right_col {
+    flex: auto;
+    max-width: calc(100% - 160px);
+  }
+}
+
 .acc__card_sd {
-  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
   background: #FFFFFF;
   margin-bottom: 16px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
 }
 
 .acc__title_sd {
-  padding: 18px 20px;
-  padding-right: 40px;
-  position: relative;
+  border: 0;
+  display: flex;
   cursor: pointer;
+  position: relative;
+  align-items: center;
 }
-.acc__title_sd h2 {
-  font-size: 22px;
-  margin-bottom: 0px;
+.acc__title_sd .date_meet {
+  gap: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  min-height: 95px;
+  text-align: center;
+  flex-direction: column;
+  background: #DEDD6F;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+}
+.acc__title_sd .date_meet p {
+  color: #000000;
+  font-weight: 700;
+  font-family: "Gotham", sans-serif;
+  font-size: 16px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+.acc__title_sd .acco_title_info {
+  flex-grow: 1;
+  padding: 8px 16px;
+  padding-right: 50px;
+}
+.acc__title_sd .acco_title_info h3 {
+  margin-bottom: 8px;
+}
+.acc__title_sd .acco_title_info p {
+  color: #000000;
+  font-weight: 700;
+  font-family: "Gotham", sans-serif;
+  font-size: 16px;
+  margin: 0px;
 }
 .acc__title_sd .acco_sign_sd {
+  top: 50%;
+  right: 0;
+  padding: 16px;
   position: absolute;
-  right: 20px;
-  top: 20px;
+  transform: translateY(-50%);
+}
+.acc__title_sd .acco_sign_sd img {
+  width: 21px;
 }
 .acc__title_sd.active .acco_sign_sd img {
   transform: rotate(180deg);
-  filter: brightness(0) saturate(100%) invert(46%) sepia(26%) saturate(472%) hue-rotate(337deg) brightness(95%) contrast(89%);
+  filter: brightness(0) saturate(100%) invert(53%) sepia(73%) saturate(2246%) hue-rotate(7deg) brightness(102%) contrast(103%);
 }
-.acc__title_sd:hover {
-  background: #CBCDBE;
+.acc__title_sd:hover h3 {
+  color: #6B1E74;
+  text-decoration: underline;
 }
 
 .acc__panel_sd {
   display: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 40px;
-  padding-top: 8px;
+  padding: 16px 32px;
 }
-.acc__panel_sd .btn_sm {
-  padding: 8px 16px;
+.acc__panel_sd h4,
+.acc__panel_sd p {
+  margin-bottom: 16px;
 }
-.acc__panel_sd .dd-cont-row {
-  display: grid;
-  grid-template-columns: 3fr 1.5fr;
-  grid-column-gap: 10px;
+.acc__panel_sd .location {
+  margin-bottom: 16px;
 }
-@media (max-width: 768px) {
-  .acc__panel_sd .dd-cont-row {
-    grid-template-columns: auto;
-  }
+.acc__panel_sd .location p {
+  margin-bottom: 8px;
 }
-.acc__panel_sd .dd-cont-row .dd_right p {
-  margin-bottom: 12px;
+.acc__panel_sd .document_era {
+  margin-bottom: 24px;
 }
-.acc__panel_sd .dd-cont-row .dd_right h3 {
-  font-size: 16px;
+.acc__panel_sd .document_era a {
   color: #000000;
-  font-family: "Book Antiqua", sans-serif;
   font-weight: 700;
-  margin-bottom: 5px;
+  font-family: "Gotham", sans-serif;
+  font-size: 16px;
+  padding: 8px 0;
+  margin-bottom: 8px;
+  text-decoration: none;
 }
-.acc__panel_sd .dd-cont-row .dd_right {
-  border-left: 1px solid #BFC2A8;
-  padding-left: 20px;
+.acc__panel_sd .document_era a:last-child {
+  margin-bottom: 0px;
 }
-@media (max-width: 768px) {
-  .acc__panel_sd .dd-cont-row .dd_right {
-    border-left: 0px;
-    padding-left: 0px;
-    padding-top: 20px;
-  }
+.acc__panel_sd .document_era a:hover {
+  color: #6B1E74;
+}
+.acc__panel_sd .document_era a:hover img {
+  filter: none;
 }
 
+/*================================= Meetings And Agendas page End =======================================*/
 .detail_wrap .tribe-events-view {
   padding-bottom: 50px;
 }
@@ -4045,6 +4118,150 @@ h2 + .expand_img_grid {
 }
 
 /*================================= Business Opportunities RFP's Page End =======================================*/
+/*================================= Housing Opportunities page Start =======================================*/
+.house_oppo {
+  padding-bottom: 40px;
+}
+.house_oppo .top-text {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 40px;
+}
+.house_oppo .top-text p {
+  font-weight: 700;
+  margin-bottom: 0;
+  padding-bottom: 24px;
+}
+.house_oppo .img_text_card {
+  padding-bottom: 40px;
+}
+.house_oppo .img_text_card .topTitle {
+  margin-bottom: 24px;
+}
+.house_oppo .img_text_card .topTitle h2 {
+  margin-bottom: 0;
+}
+.house_oppo .img_text_card p {
+  color: #000000;
+  font-size: 18px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  align-self: stretch;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.house_oppo .img_text_card .img_text_card_row {
+  max-width: 100%;
+}
+.house_oppo .img_text_card .img_text_card_row .img_text_card_col {
+  padding: 0 8px;
+  margin-bottom: 24px;
+}
+@media (max-width: 991.98px) {
+  .house_oppo .img_text_card .img_text_card_row .img_text_card_col {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}
+@media (max-width: 767.98px) {
+  .house_oppo .img_text_card .img_text_card_row .img_text_card_col {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}
+@media (max-width: 600px) {
+  .house_oppo .img_text_card .img_text_card_row .img_text_card_col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
+.house_oppo .img_text_card .img_text_card_row .text-img-wrap {
+  box-shadow: none;
+}
+.house_oppo .img_text_card .img_text_card_row .text-img-wrap .text_card_block {
+  padding: 16px;
+  background: #F4F4F4;
+  border-radius: 0 0 10px 10px;
+}
+.house_oppo .img_text_card .img_text_card_row .text-img-wrap p {
+  margin-bottom: 16px;
+}
+.house_oppo .img_text_card .img_text_card_row .text-img-wrap a:hover h3 {
+  text-decoration: none;
+}
+.house_oppo .ourProperties {
+  padding: 56px 15px 0;
+}
+.house_oppo .ourProperties .container {
+  padding: 0;
+  position: relative;
+  background-image: url(../img/plan_bg01.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.house_oppo .ourProperties .leftSide-overlay {
+  width: 50%;
+  background: #F4F4F4;
+  padding: 32px 56px 40px;
+  border-radius: 0 0 150px 0;
+}
+@media (max-width: 991.98px) {
+  .house_oppo .ourProperties .leftSide-overlay {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (max-width: 700px) {
+  .house_oppo .ourProperties .leftSide-overlay {
+    width: 100%;
+  }
+}
+.house_oppo .ourProperties .leftSide-overlay p {
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.house_oppo .ourProperties .leftSide-overlay p.subPara {
+  font-weight: 400;
+}
+.house_oppo .ourProperties .leftSide-overlay .lf-heading {
+  gap: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.house_oppo .ourProperties .leftSide-overlay .lf-heading h2 {
+  margin-bottom: 0;
+}
+@media (max-width: 991.98px) {
+  .house_oppo .ourProperties .leftSide-overlay .lf-heading h2 {
+    font-size: 28px;
+  }
+}
+.house_oppo .ourProperties .leftSide-overlay .lf-heading .planIcon {
+  width: 65px;
+  height: 65px;
+  min-width: 65px;
+  background: #FFFFFF;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.house_oppo .ourProperties .leftSide-overlay .lf-heading .planIcon img {
+  margin-left: -5px;
+  margin-top: -6px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.house_oppo .ourProperties .leftSide-overlay .lf-heading img {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+/*================================= Housing Opportunities page End =======================================*/
 .aligncenter .row {
   justify-content: center;
 }
