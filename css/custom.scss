@@ -4434,6 +4434,8 @@ h2+.expand_img_grid {
         padding-right: 16px;
         @media (max-width: 620px) {
             width: 100%;
+            padding-left: 0;
+            padding-right: 24px;
         }
     }
     .acc_right {
@@ -4450,6 +4452,9 @@ h2+.expand_img_grid {
             margin-left: 16px;
             margin-right: 16px;
             color: $black-olive;
+            @media (max-width: 620px) {
+                margin-left: 0;
+            }
         }
     }
     .document_era {
