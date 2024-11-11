@@ -27,13 +27,18 @@
   }
   .general_carousel .carousel-control-next,
   .general_carousel .carousel-control-prev {
-    top: 37%;
+    width: 40px;
+    height: 40px;
   }
   .general_carousel .carousel-control-next {
-    right: 0px;
+    right: 16px;
   }
   .general_carousel .carousel-control-prev {
-    left: 0px;
+    left: 16px;
+  }
+  .general_carousel .carousel-control-prev img,
+  .general_carousel .carousel-control-next img {
+    width: 8px;
   }
   .timeline-article .content-left-container,
   .timeline-article .content-right-container {
@@ -115,12 +120,12 @@
   .event_list_info .tribe-events-calendar-list__event-description {
     display: block !important;
   }
-  .general_carousel {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-    margin-left: 25px;
-    margin-right: 25px;
-  }
+  /*.general_carousel {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+      margin-left: 25px;
+      margin-right: 25px;
+  }*/
   .wp-block-advgb-adv-tabs.advgb-tab-horz-desktop {
     /*ul.advgb-tabs-panel li.advgb-tab a {}*/
   }
