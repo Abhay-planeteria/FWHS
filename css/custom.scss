@@ -4166,15 +4166,6 @@ h2+.expand_img_grid {
         max-width: 900px;
         margin: 0 auto;
     }
-    .top-text {
-        text-align: center;
-        padding-bottom: 32px;
-        p{
-            @include bold;
-            margin-bottom: 0;
-            padding-bottom: 24px;
-        }
-    }
     .proc_filter {
         padding-top: 10px;
         form {
@@ -4318,20 +4309,22 @@ h2+.expand_img_grid {
 }
 /*================================= Business Opportunities RFP's Page End =======================================*/
 
-/*================================= Housing Opportunities page Start =======================================*/
-.house_oppo {
+.top-text {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
     padding-bottom: 40px;
-    .top-text {
-        max-width: 900px;
-        margin: 0 auto;
-        text-align: center;
-        padding-bottom: 40px;
-        p{
-            @include bold;
-            margin-bottom: 0;
-            padding-bottom: 24px;
-        }
+    p{
+        @include bold;
+        margin-bottom: 0;
+        padding-bottom: 24px;
     }
+}
+
+/*================================= Housing Opportunities page Start =======================================*/
+.house_oppo,
+.our_prop {
+    padding-bottom: 40px;
     .img_text_card{
         padding-bottom: 40px;
         .topTitle {
@@ -4377,6 +4370,12 @@ h2+.expand_img_grid {
                 }
                 p{
                     margin-bottom: 16px;
+                    &:last-child{
+                        margin-bottom: 8px;
+                    }
+                }
+                p:not(:nth-child(2)){
+                    margin-bottom: 8px;
                 }
                 a{
                     &:hover{
@@ -4443,15 +4442,16 @@ h2+.expand_img_grid {
         }
     }
 }
+/*================================= Housing Opportunities page End =======================================*/
 .qualifySection{
     margin: 0;
-    background: $cultured;
     .container-fluid{
         gap: 40px;
         padding: 0;
         display: flex;
         position: relative;
         align-items: center;
+        background: $cultured;
         @media (max-width: 991.98px) {
             flex-direction: column;
         }
@@ -4500,8 +4500,66 @@ h2+.expand_img_grid {
         }
     }
 }
-
-/*================================= Housing Opportunities page End =======================================*/
+/*================================= Our properties page Start =======================================*/
+.our_prop{
+    padding-bottom: 0px;
+    .img_text_card{
+        .img_text_card_row{
+            .text-img-wrap{
+                a{
+                    display: inline-block;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+}
+.our_prop-map{
+    margin: 0;
+    .container-fluid{
+        gap: 8px;
+        padding: 0;
+        display: flex;
+        position: relative;
+        //align-items: center;
+        background: $cultured;
+        padding-left: 120px !important;
+        @media (max-width: 1300px) {
+            padding-left: 0px !important;
+        }
+        @media (max-width: 991.98px) {
+            flex-direction: column;
+        }
+    }
+    .rightSide{
+        padding-right: 0;
+        width: calc(100% - 360px);
+        @media (max-width: 991.98px) {
+            width: 100%;
+        }
+        img{
+            width: 100%;
+            max-height: 490px;
+            object-fit: cover;
+        }
+    }
+    .leftSide{
+        width: 350px;
+        padding: 24px;
+        @media (max-width: 991.98px) {
+            width: 100%;
+        }
+        .search-Filter-Block{
+            padding: 0;
+            margin-bottom: 0;
+            .search-box,
+            .filter_box{
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+/*================================= Our properties page End =======================================*/
 
 //General fix with page builder
 .aligncenter {
